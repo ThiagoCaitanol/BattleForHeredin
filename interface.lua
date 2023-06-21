@@ -1,20 +1,31 @@
-print([[
-=====================================================================
-      O                                                      O
-{o)xxx|===============-  BATTLE FOR HEREDIN  -===============|xxx(o}
-      O                                                      O
-=====================================================================
+local interface = {}
 
-Heredin a grande capital da Terra-Mediana®, gorvernada por um tirano malévolo que utilizava
-do poder de sua pulsereira para subtrair seus inimigos e inquisitores a 0!
+---
+---Essa função habilita o modo UTF-8 no terminal.
+---
+function interface.enableUtf8()
+    os.execute("chcp 65001")
+end
+
+function interface.header()
     
-A Terra-Mediana® precisa de um bravo herói que utilize poderes do protagonismos para livra-los deste mal!
-==========================================================================================================
-]])
+    print([[
+    =====================================================================
+        O                                                      O
+    {o)xxx|===============-  BATTLE FOR HEREDIN  -===============|xxx(o}
+        O                                                      O
+    =====================================================================
 
---apresentação do heroi (escolha de nome e habilidades)
+    Heredin a grande capital da Terra-Mediana®, gorvernada por um tirano malévolo que utilizava
+    do poder de sua pulsereira para subtrair seus inimigos e inquisitores a 0!
+        
+    A Terra-Mediana® precisa de um bravo herói que utilize poderes do protagonismos para livra-los deste mal!
+    ==========================================================================================================
+    ]])
+end
 
-print([[
+function interface.begin()
+    print([[
 
                               -|             |-
            -|                 [-_-_-_-_-_-_-_-]                  |-
@@ -35,8 +46,10 @@ _____----- |     ]               [ ||||||| ]              [     |
            Finalmente o fim da tirania está mais proximo que nunca.
              Mas... o que é aquilo parado na porta do castelo?
 ]])
+end
 
-print([[
+function interface.skeletonApresentation()
+    print([[
 
             _..--""---.
             /           ".
@@ -83,11 +96,13 @@ Oh não deixaram um total de 1 guarda esqueleto na porta do castelo! Mas porque 
                Talvez seja feriado no reino mas que sorte!
 
 ]])
+end
 
 --luta com o esqueleto
 
 --caso perca
-print([[
+function interface.lostSkeletonBattle()
+    print([[
 
 _,_
 /7/Y/^\
@@ -150,10 +165,10 @@ L>_   _-< 7/|_-__,__-)\,__)(".  \_>-<_/D
                 Dica: Para causar dano no inimigo é necessario atacar!
 
 ]])
+end
 
-
---caso vença
-print([[
+function interface.winSkeletonBattle()
+    print([[
 
                            ,--.
                           {    }
@@ -184,9 +199,11 @@ print([[
 =======================================================================================================
     Finalmente com seus lacaios derrotados o Grande doutrinador boss chefao final Saulton lhe aguarda!
 ]])
-
+end
 --começou a batalha com boss
-print([[
+
+function interface.bossApresentation()
+    print([[
 
                   __,-----,,,,  ,,,--------,__ 
                 _-/|\\/|\\/|\\\|\//\\\//|/|//|\\_ 
@@ -224,8 +241,9 @@ spb   _-'@@@@@@@@;-~;     ~~--|~|~|--~~     ;~--;@@@@@@@'-_
          De frente com o seu maior rival é hora da batalha!
 
 ]])
+end
 
---caso vença
+function interface.winBossBattle()
 print([[print
 
                                  ____                                         
@@ -273,8 +291,10 @@ Depois de tantos sacrificios e guerras Heredin pode prosperar com seu novo grand
       lider que pagará seus devidos impostos corretamente!
 
 ]])
-
+end
 --caso perca boss
+
+function interface.lostBossBattle()
 print([[
 
                                 _.-^^---....,,--       
@@ -291,3 +311,6 @@ print([[
 =============================================================================================
 Infelizmente não dessa vez... Você foi socado na cara com tanta força que explodiu toda Heredin
 ]])
+end
+
+return interface
