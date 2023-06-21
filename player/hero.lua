@@ -10,7 +10,8 @@ hero.speed = 4
 
 hero.potions = 3
 
-
+---Pergunta ao usuário qual sera o nome do heroi
+---@return string
 function hero.makingHero()
     print("Para começarmos nossa jornada insira seu nome:")
     io.write("> ")

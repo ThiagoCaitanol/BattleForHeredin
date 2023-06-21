@@ -48,6 +48,7 @@ _____----- |     ]               [ ||||||| ]              [     |
 ]])
 end
 
+---Inicio da batalha com esqueleto
 function interface.skeletonApresentation()
     print([[
 
@@ -98,9 +99,7 @@ Oh não deixaram um total de 1 guarda esqueleto na porta do castelo! Mas porque 
 ]])
 end
 
---luta com o esqueleto
-
---caso perca
+---Caso perca na batalha contra o esqueleto
 function interface.lostSkeletonBattle()
     print([[
 
